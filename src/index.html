@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"
+		/>
+
+		<title>Pikachu</title>
+		<link rel="stylesheet" href="./stlyle.css" />
+	</head>
+	<body>
+		<div>
+			<a href="./demo.html">点我观看过程演示</a>
+		</div>
+		<div id="border1">
+			<div class="face">
+				<div class="eye left"></div>
+				<div class="eye right"></div>
+				<div class="nose"></div>
+				<div id="border2">
+					<div class="mouth">
+						<div class="dot1"></div>
+						<div class="dot2"></div>
+						<div class="upperLip">
+							<div class="left"></div>
+							<div class="right"></div>
+						</div>
+						<div id="border3">
+							<div class="underLip">
+								<div class="tongue"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cheek left"></div>
+				<div class="cheek right"></div>
+			</div>
+		</div>
+		<script>
+			let maxWidth = window.screen.width;
+			if (maxWidth <= 500) {
+				const x = maxWidth / 500;
+				document.querySelector('#border1').style.transform = `scale(${x})`;
+				// document.querySelector('.face').style.transform = `scale(${x})`;
+			}
+		</script>
+	</body>
+</html>

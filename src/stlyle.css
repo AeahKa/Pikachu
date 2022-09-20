@@ -1,0 +1,261 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	background-color: #ffe600;
+}
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+*::-webkit-scrollbar {
+	display: none;
+}
+a {
+	width: 144px;
+	text-decoration: none;
+	text-align: center;
+	font-weight: bold;
+	color: #2e2e2e;
+	position: fixed;
+	bottom: 0%;
+	right: 50%;
+	left: 50%;
+	margin-left: -72px;
+	margin-top: 10px;
+	margin-bottom: 25px;
+	z-index: 2;
+}
+#border1 {
+	width: 100vh;
+	height: 345px;
+	left: 50%;
+	right: 50%;
+	top: 30vh;
+	margin-left: -50vh;
+	position: fixed;
+	background: #ffe600;
+}
+.face {
+	width: 500px;
+	height: 350px;
+	left: 50%;
+	right: 50%;
+	margin-left: -250px;
+	position: relative;
+	background: #ffe600;
+}
+.nose {
+	border: 14px solid transparent;
+	border-top-color: #000;
+	width: 0%;
+	border-radius: 50%;
+	transform: scaleX(1.2);
+	position: relative;
+	left: 50%;
+	right: 50%;
+	margin-left: -14px;
+	top: 40px;
+}
+@keyframes wave {
+	0% {
+		transform: rotate(5deg);
+	}
+	25% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(-5deg);
+	}
+	75% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(5deg);
+	}
+}
+.nose:hover {
+	animation: wave 100ms infinite linear;
+}
+.eye {
+	border: 4px solid #000;
+	background-color: #2e2e2e;
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	position: absolute;
+	left: 50%;
+	right: 50%;
+	top: 0;
+	margin-left: -30px;
+}
+.eye::before {
+	content: '';
+	display: block;
+	width: 25px;
+	height: 25px;
+	background-color: #ffff;
+	border-radius: 50%;
+	position: relative;
+	left: 10px;
+	top: 2px;
+}
+.eye.left {
+	transform: translateX(-130px);
+}
+.eye.right {
+	transform: translateX(130px);
+}
+
+#border2 {
+	height: 218px;
+	width: 210px;
+	position: relative;
+	left: 50%;
+	right: 50%;
+	margin-left: -105px;
+	top: 60px;
+}
+.mouth {
+	height: 218px;
+	width: 210px;
+	position: relative;
+	left: 50%;
+	right: 50%;
+	margin-left: -105px;
+	overflow: hidden;
+	top: -1px;
+}
+
+.mouth .upperLip .left {
+	border: 4px solid #000;
+	border-top: transparent;
+	border-right: transparent;
+	height: 30px;
+	width: 100px;
+	border-radius: 0 0 10% 100%;
+	background: #ffe600;
+	position: absolute;
+	left: 50%;
+	right: 50%;
+	margin-left: -50px;
+	transform: rotate(-22deg) translateX(-55px);
+	top: -28px;
+	z-index: 1;
+}
+
+.mouth .upperLip .right {
+	border: 4px solid #000;
+	border-top: transparent;
+	border-left: transparent;
+	height: 30px;
+	width: 100px;
+	border-radius: 0 0 100% 10%;
+	background: #ffe600;
+	position: absolute;
+	left: 50%;
+	right: 50%;
+	margin-left: -50px;
+	transform: rotate(22deg) translateX(55px);
+	top: -28px;
+	z-index: 1;
+}
+
+#border3 {
+	height: 610px;
+	width: 168px;
+	position: relative;
+	left: 50%;
+	right: 50%;
+	margin-left: -84px;
+	bottom: 385px;
+}
+.mouth .underLip {
+	border: 4px solid #000;
+	background: #a11c1c;
+	height: 600px;
+	width: 168px;
+	border-radius: 150px / 500px;
+	position: absolute;
+	left: 50%;
+	right: 50%;
+	margin-left: -84px;
+	overflow: hidden;
+}
+.mouth .underLip > .tongue {
+	border: 2px solid rgb(67, 39, 0);
+	height: 700px;
+	width: 280px;
+	border-radius: 500px / 750px;
+	background-color: #fd4848;
+	position: relative;
+	left: 50%;
+	right: 50%;
+	margin-left: -140px;
+	top: 404px;
+}
+
+.mouth .dot1 {
+	height: 12px;
+	width: 35px;
+	background-color: #ffe600;
+	position: absolute;
+	z-index: 2;
+}
+.mouth .dot2 {
+	height: 12px;
+	width: 35px;
+	background-color: #ffe600;
+	position: absolute;
+	right: 0%;
+	z-index: 2;
+}
+.cheek {
+	border: 3px solid #432700;
+	background-color: #ff0000;
+	width: 98px;
+	height: 95px;
+	border-radius: 50%;
+	position: absolute;
+	left: 50%;
+	right: 50%;
+	top: 100px;
+	margin-left: -49px;
+	transform: translateX(-200px);
+	z-index: 2;
+}
+.cheek.left {
+	transform: translateX(-190px);
+}
+.cheek.right {
+	transform: translateX(190px);
+}
+
+.cheek.left > img.lightning-l {
+	/* border: 1px solid rgb(255, 0, 0); */
+	position: absolute;
+	transform: rotateZ(160deg) scale(4) translateX(90px) translateY(45px);
+}
+.cheek.left > img.lightning-r {
+	/* border: 1px solid rgb(0, 47, 255); */
+	position: absolute;
+	transform: rotateZ(-30deg) scale(4) translateX(158px) translateY(83px);
+}
+.cheek.right > img.lightning-l {
+	/* border: 1px solid rgb(0, 255, 119); */
+	position: absolute;
+	transform: rotateZ(160deg) scale(4) translateX(179px) translateY(77px);
+}
+.cheek.right > img.lightning-r {
+	/* border: 1px solid rgb(144, 0, 255); */
+	position: absolute;
+	transform: rotateZ(-30deg) scale(4) translateX(75px) translateY(36px);
+}
+
+.cheek > img {
+	z-index: 2;
+	display: none;
+}
+.cheek:hover > img {
+	display: block;
+}
